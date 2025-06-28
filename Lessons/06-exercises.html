@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 Exercises</title>
+</head>
+<body>
+  <script>
+    // 6A + 6B + 6C
+    let hourOfDay = 16;
+    const name = "Lonneke";
+    if (hourOfDay >= 6 && hourOfDay <= 12) {
+      console.log(`Good morning ${name}!`)
+    } else if (hourOfDay >= 13 && hourOfDay <= 17) {
+      console.log(`Good afternoon ${name}!`)
+    } else {
+      console.log(`Good night ${name}!`)
+    }
+
+    // 6D + 6E
+    let age = 74;
+    const isHoliday = false;
+    if ((age <= 6 || age >= 65) && isHoliday == false) {
+      console.log("Discount");
+    } else {
+      console.log("No discount");
+    }
+
+    // 6F + 6G + 6H + 6I + 6J
+    let result = "";
+    let num = Math.random();
+    let guess = "Heads";
+
+    num < 0.5 ? result = "Heads" : result = "Tails";
+    // if (num < 0.5) {
+    //   result = "Heads";
+    // } else {
+    //   result = "Tails";
+    // }
+    guess === result ? console.log("You win!") : console.log("You lose :/");
+    // if (guess === result) {
+    //   console.log("You win!");
+    // } else if (guess != result) {
+    //   console.log("You lose :/")
+    // }
+
+  </script>
+</body>
+</html>

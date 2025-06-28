@@ -10,20 +10,20 @@
   <p>Cart Quantity</p>
   <button onclick="console.log(`Cart quantity: ${cartQuantity}`)">
   Show Quantity</button>
-  <button onclick="cartQuantity++">Add to Cart</button>
-  <button onclick="cartQuantity += 2">+2</button>
-  <button onclick="cartQuantity += 3">+3</button>
+  <button onclick="cartQuantity < 10 ? cartQuantity++: alert('The cart is full')">Add to Cart</button>
+  <button onclick="cartQuantity < 10 ? cartQuantity += 2: alert('The cart is full')">+2</button>
+  <button onclick="cartQuantity < 10 ? cartQuantity += 3: alert('The cart is full')">+3</button>
 
   <!--5H-->
-  <button onclick="cartQuantity += 4">+4</button>
-  <button onclick="cartQuantity += 5">+5</button>
+  <button onclick="cartQuantity < 10 ? cartQuantity += 4: alert('The cart is full')">+4</button>
+  <button onclick="cartQuantity < 10 ? cartQuantity += 5: alert('The cart is full')">+5</button>
 
   <!--5I-->
-  <button onclick="cartQuantity--">Remvoe from Cart</button>
+  <button onclick="cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity--">Remove from Cart</button>
 
   <!-- 5J + 5K -->
-   <button onclick="cartQuantity -= 2">-2</button>
-  <button onclick="cartQuantity -= 3">-3</button>
+   <button onclick="cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity -= 2">-2</button>
+  <button onclick="cartQuantity <= 0 ? alert('Not enough items in the cart') : cartQuantity -= 3">-3</button>
   
   <button onclick="console.log('Your Cart was reset');        
     cartQuantity = 0; 
