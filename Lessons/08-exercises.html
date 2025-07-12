@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 Exercises || Objects</title>
+</head>
+<body>
+
+  <script>
+    // 8A
+    const product = {
+      name: "basketball",
+      price: 2095
+    }
+
+    console.log(product);
+
+    // 8B
+    product.price += 500;
+    console.log(product);
+
+    // 8C 
+    product["delivery-time"] = "3 days";
+    console.log(product);
+
+    // 8D
+    const product2 = {
+      name: "socks",
+      price: 899
+    }
+
+    function comparePrice(product1, product2) {
+      if (product1.price < product2.price) {
+        console.log(`${product1.name} is cheaper!`);
+      } else {
+        console.log(`${product2.name} is cheaper!`);
+      }
+    }
+
+    comparePrice(product, product2);
+
+    // 8E
+    function isSameProduct (product1, product2) {
+      if (product1.name == product2.name && product1.price == product2.price) {
+        console.log(`These are the same product!`);
+      } else {
+        console.log(`Products are different...`);
+      }
+    }
+
+    isSameProduct(product, product2);
+
+    product2.name = "basketball";
+    product2.price = 2595;
+
+    isSameProduct(product, product2);
+
+    // 8F
+    console.log("Good Morning".toLowerCase());
+
+    // 8G
+    let string = "test";
+    let repeatedString = string.repeat(3);
+
+    console.log(repeatedString);
+  </script>
+  
+</body>
+</html>
