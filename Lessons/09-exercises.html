@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 Exercises</title>
+</head>
+<body>
+  <h3>9A + 9B</h3>
+  <button>9A</button>
+  <button class="nineB">9B</button>
+
+  <h3>9C</h3>
+  <button class="heads" onclick="headsOrTails('heads')">Heads</button>
+  <button class="tails" onclick="headsOrTails('tails')">Tails</button>
+  <p class="results"></p>
+
+  <h3>9D + 9E + 9F</h3>
+  <input class="nameInput" placeholder="Name" onkeydown="useEnter(event)"/>
+  <button class="submitName" onclick="showName()">Submit</button>
+  <p class="helloBox"></p>
+
+  <h3>9H</h3>
+  <input class="keyUp" onkeyup="onKeyUp()" />
+  <p class="keyUptext"></p>
+
+  <script>
+    // 9A + 9B
+    console.log(document.querySelector("button").innerHTML);
+    document.querySelector(".nineB").innerHTML = "9b done!";
+
+    // 9C
+    function headsOrTails (choice) {
+      document.querySelector(".results").innerHTML = `You chose: ${choice}`
+    }
+
+    // 9D + 9E + 9F
+    function showName() {
+      let names = document.querySelector(".nameInput").value;
+      document.querySelector(".helloBox").innerHTML = `Your name is: ${names}`
+    }
+
+    function useEnter (event) {
+      if (event.key === "Enter") {
+        showName();
+      }
+    }
+
+    // 9H
+    function onKeyUp() {
+      let text = "";
+      const inputElem = document.querySelector(".keyUp");
+      document.querySelector(".keyUptext").innerHTML = inputElem.value;
+    }
+    
+
+  </script>
+</body>
+</html>

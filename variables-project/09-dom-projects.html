@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The DOM Projects/Exercises || SSD</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button class= "subBtn" onclick="subButton()">Subscribe</button>
+
+  <hr />
+  
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40: + $10.00 Shipping</p>
+  <p>Orders over $40: FREE Shipping</p>
+  <input type="number" class="orderPrice" placeholder="Cost of order" onkeydown="enterBtn(event)">
+  <button class="calculatePrice" onclick="calculatePrice()">Calculate</button>
+  <p class="totalPrice"></p>
+
+  <script>
+    // A function that changes the text in the button
+    function subButton() {
+      // Retrieve the button to check the text in the button
+      changeBtn = document.querySelector(".subBtn");
+      subBtn = document.querySelector(".subBtn").innerHTML;
+      // If the button text is equal to Subscribe, change it to subschribed
+      if (subBtn == "Subscribe") {
+        changeBtn.innerHTML = "Subscribed";
+      } 
+      // Else, change it back to subscribed. 
+      else {
+        changeBtn.innerHTML = "Subscribe";
+      }
+    }
+
+    function calculatePrice() {
+      // Get the value from the input field
+      let costOfOrder = Number(document.querySelector(".orderPrice").value) * 100;
+
+      // If the number is less than 40, 10 dollar will be added to 
+      if (costOfOrder < 4000) {
+        document.querySelector(".totalPrice").innerHTML = `$ ${(costOfOrder + 1000) / 100}`;
+      } else {
+        document.querySelector(".totalPrice").innerHTML = `$ ${costOfOrder / 100}`;
+      }
+    }
+
+    // If the enter key is pressed, make it so that the number appears
+    function enterBtn (event) {
+      if (event.key === "Enter") {
+        calculatePrice();
+      }
+    }
+  </script>
+</body>
+</html>
