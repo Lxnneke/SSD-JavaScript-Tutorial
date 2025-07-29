@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10 Exercises || SSD</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .amazonBtn {
+      background-color: rgb(255, 216, 20);
+      border: none;
+      border-radius: 50px;
+      padding: 8px 38px;
+      font-size: 1rem;
+    }
+
+    .uberBtn1 {
+      background-color: black;
+      color: white;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+
+    .uberBtn2 {
+      background-color: rgb(230, 230, 230);
+      color: black;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .onOffSwitch {
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-family: Arial;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+
+    .isToggled {
+      background-color: black;
+      color: white;
+    }
+
+    .orderPrice {
+      font-size: 1rem;
+      padding: 8px;
+    }
+
+    .calculatePrice {
+      background-color: green;
+      border: 1px solid green;
+      color: white;
+      padding: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .warningMessage {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h3>10A</h3>
+  <button class="amazonBtn">Add to Cart</button>
+  <h3>10B</h3>
+  <button class="uberBtn1">Request now</button>
+  <button class="uberBtn2">Schedule for later</button>
+
+  <h3>10c</h3>
+  <button class="js-button">Test</button>
+
+  <h3>10D + 10E + 10F + 10G</h3>
+  <button class="onOffSwitch onOffSwitchOne" onclick="changeUp('One')">Gaming</button>
+  <button class="onOffSwitch onOffSwitchTwo" onclick="changeUp('Two')">Music</button>
+  <button class="onOffSwitch onOffSwitchThree" onclick="changeUp('Three')">Tech</button>
+
+  <h3>10H</h3>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40: + $10.00 Shipping</p>
+  <p>Orders over $40: FREE Shipping</p>
+  <input type="number" class="orderPrice" placeholder="Cost of order" onkeydown="enterBtn(event)">
+  <button class="calculatePrice" onclick="calculatePrice()">Calculate</button>
+  <p class="warningMessage"></p>
+  <p class="totalPrice"></p>
+
+  <script src="./10-exercises.js"></script>
+</body>
+</html>

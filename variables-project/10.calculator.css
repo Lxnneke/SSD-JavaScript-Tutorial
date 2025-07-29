@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+button {
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  height: 60px;
+  width: 60px;
+  margin: 3px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.numberBtn {
+  background-color: #333333;
+}
+
+.numberBtn:active {
+  background-color: #868686
+}
+
+.counterBtn {
+  background-color: #fea00a;
+}
+
+.counterBtn:active {
+  background-color: #ffc260;
+}
+
+.clearBtn {
+  font-size: 1rem;
+}
+
+.calculatorScreen {
+  font-size: 1.5rem;
+  color: white;
+}
