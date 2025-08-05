@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11 - Part 2 Exercises</title>
+</head>
+<body>
+  
+  <script>
+    // 11 O + 11 P 
+    const arrayO = ["hello", "world", "search", "good", "search"];
+    let index = -1;
+
+    for (let i = 0; i < arrayO.length; i++) {
+      if (arrayO[i] === "search") {
+        index = i;
+        break;
+      } 
+    }
+    console.log(index);
+
+
+    // 11 Q
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+          break;
+        }
+      }
+      return -1;
+    }
+
+    console.log(findIndex(["green", "red", "blue", "red"], "red"));
+    console.log(findIndex(["green", "red", "blue", "red"], "yellow"));
+
+    // 11 W
+    function unique (array) {
+      const result = [];
+
+      for (let i = 0; i < array.length; i++) {
+        const word = array[i];
+
+        if (findIndex(result, word) === -1) {
+          result.push(word);
+        }
+      }
+      console.log(result);
+    }
+
+    unique(["green", "red", "blue", "red"]);
+    unique(["green", "red", "red", "green"]);
+
+    // 11 R + 11 S + 11 T + 11 U
+    function removeEgg (foods) {
+      const reversedFoods = foods.slice().reverse();
+      const noEggs = [];
+      let eggsRemove = 0;
+      for (let i = 0; i < reversedFoods.length; i++) {
+        if (reversedFoods[i] === "egg" && eggsRemove != 2) {
+          eggsRemove++;
+          continue;
+        }
+        noEggs.push(reversedFoods[i]);
+      }
+      console.log(noEggs.reverse());
+    }
+
+    const foods = ["egg", "apple", "egg", "egg", "ham"];
+    removeEgg(foods);
+    console.log(foods);
+
+    // 11 V
+    let num = 20;
+    for (let i = 0; i < num; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz!");
+      } else if (i % 5 == 0) {
+        console.log("Buzz!");
+      } else if (i % 3 === 0) {
+        console.log("Fizz!"); 
+      } else {
+        console.log(i);
+      }
+    }
+
+  </script>
+</body>
+</html>

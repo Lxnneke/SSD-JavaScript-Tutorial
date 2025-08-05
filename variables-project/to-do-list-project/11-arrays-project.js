@@ -1,4 +1,4 @@
-let todoList = [{
+let todoList = JSON.parse(localStorage.getItem('todoList')) || [{
     name: "Make dinner",
     dueDate: "10-10-2000"
   },
@@ -28,6 +28,7 @@ function renderToDoList() {
   }
   
   document.querySelector(".toDoListText").innerHTML = todoListHTML;
+  saveToStorage();
 }
 
 function addAToDo() { 
@@ -45,4 +46,8 @@ function addAToDo() {
 
   toDoInput.value = "";
   renderToDoList();
+}
+
+function saveToStorage() {
+  localStorage.setItem('todoList', JSON.stringify(todoList));
 }

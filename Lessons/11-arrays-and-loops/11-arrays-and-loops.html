@@ -57,14 +57,58 @@
     // console.log(total);
 
     
-    let arr = [1, 1, 3, 14];
-    let newArr = [];
-    for (let i = 0; i < arr.length; i++) {
-      let newNum = arr[i] * 2;
-      newArr.push(newNum);
+    // let arr = [1, 1, 3, 14];
+    // let newArr = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //   let newNum = arr[i] * 2;
+    //   newArr.push(newNum);
+    // }
+
+    // console.log(newArr)
+
+    // const array1 = [1, 2, 3];
+    // const array2 = array1.slice();
+    // array2.push(4);
+    // console.log(array1);
+    // console.log(array2);
+
+    // const [firstValue, secondValue] = [1, 2, 3];
+    // console.log(firstValue);
+
+    for (let i = 1; i <= 10; i++) {
+      if (i % 3 === 0) {
+        continue;
+      }
+      console.log(i);
+      if (i === 8) {
+        break;
+      }
     }
 
-    console.log(newArr)
+    let index = 0;
+    while (index <= 10) {
+      if (index % 3 === 0) {
+        index++;
+        continue;
+      }
+      console.log(index);
+      index++;
+    }
+
+    function doubleNumbers(nums) {
+      const newArr = [];
+      for (let i = 0; i < nums.length; i++) {
+        let newNum = nums[i] * 2;
+        if (newNum === 0) {
+          return newArr;
+        }
+        newArr.push(newNum);
+      }
+      return newArr;
+    }
+
+    console.log(doubleNumbers([1, 1, 3]));
+    console.log(doubleNumbers([4, 67, 0, 56, 334]));
   </script>
 </body>
 </html>

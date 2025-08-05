@@ -1,0 +1,49 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todoGrid,
+.todoInputGrid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todoInputGrid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+input {
+  font-size: 1rem;
+  padding: 6px;
+}
+
+.addToDoBtn {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.addToDoBtn:hover {
+  background-color: rgb(92, 154, 92);
+}
+
+.deleteBtn {
+  background-color: lightcoral;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(160, 85, 85);
+}
