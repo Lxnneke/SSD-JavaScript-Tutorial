@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 12 || Advanced Functions || SSD</title>
+</head>
+<body>
+  
+  <script>
+    /*function greeting (name) {
+      console.log(`Hello, ${name}!`);
+    }
+
+    greeting("Lonneke");
+
+
+    const num = 2;
+    const name = "Lilah";
+    const func1 = function () {
+      console.log("Hello again!");
+    };
+
+    console.log(func1);
+    console.log(typeof func1);
+    func1();
+
+    const object = {
+      num: 2,
+      greeting: function() {
+        console.log("Hello for the third time!");
+      }
+    }
+
+    object.greeting();
+
+    function display (display1) {
+      console.log(display1);
+    }
+
+    display(2);
+
+    function run (para) {
+      para();
+    };
+
+    run(function() {
+      console.log("Hello for the fourth time....")
+    });*/
+
+
+    // setTimeout(function() {
+    //   console.log("Time out started!");
+    //   console.log("Time out ended!");
+    // },  1000);
+
+    // console.log("Next line!");
+
+    // setInterval(function () {
+    //   console.log("Interval has ended!");
+    // }, 2000);
+
+    // console.log("Interval has started");
+
+    [
+      'Make dinner',
+      'Wash dishes',
+      "Watch YT"
+    ].forEach(function (value, index) {
+      if (value == "Wash dishes") {
+        return;
+      } 
+      console.log(`${value} with index ${index}`);
+    });
+  </script>
+</body>
+</html>

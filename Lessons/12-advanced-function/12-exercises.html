@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 12 Exercises</title>
+</head>
+<body>
+
+  <h3>12C</h3>
+  <button onclick="startToFinish()" class="buttonTwelveC">Start</button>
+
+  <h3>12E</h3>
+  <button onclick="addToCart()" >Add to cart</button>
+  <p class="twelveE"></p>
+
+  <h3>12H</h3>
+  <button class="add" onclick="
+    messages++;
+    displayNotification();"
+  >Add</button>
+  <button class="remove" onclick=" if (messages > 0) {
+        messages--;
+
+        if (messages === 0) {
+          stopNotification();
+        }
+      }">Remove</button>
+  
+  <script>
+    // 12A
+    let add = function () {
+      console.log(2 + 3);
+    }
+
+    add();
+    add();
+
+    // 12B
+    function runTwice(fun) {
+      fun();
+      fun();
+    }
+
+    runTwice(function () { 
+      console.log("12b");
+    });
+    runTwice(add);
+
+
+    // 12C + 12D
+    function startToFinish() {
+      document.querySelector(".buttonTwelveC").innerHTML = "Loading..."
+      setTimeout(function() {
+        document.querySelector(".buttonTwelveC").innerHTML = "Finished!"
+      }, 1000)
+    }
+
+    // 12E + 12F
+    function addToCart() {
+      document.querySelector(".twelveE").innerHTML = "Added!";
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(function () {
+        document.querySelector(".twelveE").innerHTML = "";
+      }, 2000)
+    }
+
+    // 12G + 12H;
+      let messages = 2;
+      let intervalId;
+
+      let isDisplayingNotification;
+
+      // Start displaying the notification in the tab
+      // when the page first loads.
+      displayNotification();
+
+      function displayNotification() {
+        // If we're already displaying the notification,
+        // stop this function because we don't want to
+        // create 2 intervals at the same time.
+        if (isDisplayingNotification) {
+          return;
+        }
+
+        isDisplayingNotification = true;
+
+        intervalId = setInterval(function() {
+          if (document.title === 'App') {
+            document.title = `(${messages}) New messages`;
+          } else {
+            document.title = 'App';
+          }
+        }, 1000);
+      }
+
+      function stopNotification() {
+        isDisplayingNotification = false;
+
+        clearInterval(intervalId);
+        document.title = 'App';
+      }
+
+  </script>
+</body>
+</html>
