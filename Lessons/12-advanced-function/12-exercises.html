@@ -29,9 +29,7 @@
   
   <script>
     // 12A
-    let add = function () {
-      console.log(2 + 3);
-    }
+    let add = () => console.log(2 + 3);
 
     add();
     add();
@@ -42,9 +40,7 @@
       fun();
     }
 
-    runTwice(function () { 
-      console.log("12b");
-    });
+    runTwice(() => console.log("12b"));
     runTwice(add);
 
 

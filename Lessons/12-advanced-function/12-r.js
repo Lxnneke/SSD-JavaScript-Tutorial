@@ -97,12 +97,21 @@ function autoPlay() {
       playGame(playerMove);
     }, 2000);
     isAutoPlaying = true;
+    document.querySelector(".autoPlayBtn").innerHTML = "Stop Playing";
   } else {
     clearInterval(intervalID);
     isAutoPlaying = false;
+    document.querySelector(".autoPlayBtn").innerHTML = "Auto Play!";
   }
 }
 
+function resetScore () {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  localStorage.removeItem(score);
+  updateScoreElem();
+};
 
 document.querySelector(".rockBtn").addEventListener("click", () => {
   playGame("Rock");
@@ -114,4 +123,20 @@ document.querySelector(".paperBtn").addEventListener("click", () => {
 
 document.querySelector(".scissorsBtn").addEventListener("click", () => {
   playGame("Scissors");
+});
+
+document.querySelector(".autoPlayBtn").addEventListener("click", () => {
+  autoPlay();
+});
+
+document.body.addEventListener("keydown", (event) => {
+  if (event.key === "a") {
+    autoPlay();
+  } else if (event.key === "Backspace") {
+    resetScore();
+  }
+});
+
+document.querySelector(".resetScore").addEventListener("click", () => {
+  resetScore();
 });
